@@ -1,3 +1,13 @@
+## Running with Docker Compose
+
+docker-compose up --build
+
+- Frontend: http://localhost:5173
+- Backend: http://localhost:5000
+- MongoDB: internal, persisted in a named Docker volume
+
+
+
 # TaskFlow – MERN Task Manager with CI/CD
 
 A beginner-to-practical MERN stack project: React + Node.js + Express + MongoDB,
