@@ -4,4 +4,4 @@ function App() {
   return <Home />;
 }
 
-export default ;
+export default App;
