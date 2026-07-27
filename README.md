@@ -26,7 +26,7 @@ Runs on http://localhost:5000
 
 ### Frontend
 ```
-cd frontend
+cd frontendd
 npm install
 npm run dev
 ```
