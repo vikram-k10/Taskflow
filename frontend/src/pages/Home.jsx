@@ -34,7 +34,7 @@ export default function Home() {
 
   return (
     <div>
-      <h1>TaskFlow</h1>
+      <h1>TaskFlow⚡</h1>
       <TaskForm onAdd={handleAdd} />
       {tasks.map((task) => (
         <TaskCard
