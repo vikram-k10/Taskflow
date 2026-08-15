@@ -101,5 +101,6 @@ jobs:
           script: |
             cd ~/taskflow
             docker compose pull
+            echo "JWT_SECRET=${{ secrets.JWT_SECRET }}" > .env
             docker compose up -d --force-recreate
             docker image prune -f
