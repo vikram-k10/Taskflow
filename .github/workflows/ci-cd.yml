@@ -74,7 +74,7 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/taskflow-frontend:latest
           build-args: |
-            VITE_API_URL=/api/tasks
+            VITE_API_URL=/api
   deploy:
     needs: docker-build-push
     runs-on: ubuntu-latest
