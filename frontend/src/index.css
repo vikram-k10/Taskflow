@@ -40,3 +40,22 @@ button {
   color: #fff;
   cursor: pointer;
 }
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.auth-page {
+  max-width: 400px;
+  margin: 60px auto;
+}
+
+.auth-page form {
+  flex-direction: column;
+}
+
+.error-text {
+  color: #d33;
+}

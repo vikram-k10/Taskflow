@@ -1,15 +1,12 @@
 import { useEffect, useState } from "react";
 import TaskForm from "../components/TaskForm";
 import TaskCard from "../components/TaskCard";
-import {
-  fetchTasks,
-  addTask,
-  updateTaskStatus,
-  deleteTask,
-} from "../services/api";
+import { fetchTasks, addTask, updateTaskStatus, deleteTask } from "../services/api";
+import { useAuth } from "../context/AuthContext";
 
 export default function Home() {
   const [tasks, setTasks] = useState([]);
+  const { user, logout } = useAuth();
 
   const loadTasks = async () => setTasks(await fetchTasks());
 
@@ -34,7 +31,13 @@ export default function Home() {
 
   return (
     <div>
-      <h1>TaskFlow⚡</h1>
+      <div className="header-row">
+        <h1>TaskFlow</h1>
+        <div>
+          <span>Hi, {user?.name}</span>
+          <button onClick={logout}>Log out</button>
+        </div>
+      </div>
       <TaskForm onAdd={handleAdd} />
       {tasks.map((task) => (
         <TaskCard

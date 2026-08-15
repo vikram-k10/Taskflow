@@ -9,6 +9,8 @@ const taskSchema = new mongoose.Schema(
       enum: ["pending", "in-progress", "done"],
       default: "pending",
     },
+    user: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
+    workspace: { type: mongoose.Schema.Types.ObjectId, ref: "Workspace", required: true },
   },
   { timestamps: true }
 );
